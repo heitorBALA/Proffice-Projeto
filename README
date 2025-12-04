@@ -1,0 +1,35 @@
+# 📘 Sistema de Gestão de Coordenação de Cursos
+
+### O Proffice é uma startup focada na criação de soluções inteligentes para o ambiente educacional. Nosso objetivo é otimizar o trabalho das coordenações de cursos, oferecendo uma plataforma moderna, segura e totalmente integrada que facilita desde o planejamento acadêmico até a comunicação com alunos, professores e administração.
+
+# 🧭 Visão Geral
+
+### O Proffice é uma plataforma digital que centraliza todas as operações administrativas e acadêmicas de uma coordenação. Ele foi projetado para reduzir burocracias, eliminar planilhas manuais e aumentar a eficiência das equipes, garantindo mais organização e produtividade.
+---
+
+## ⚙ Funcionalidades
+
+* *Gestão de Turmas:* Cadastro e edição de turmas, controle de alunos matriculados.
+* *Acompanhamento Acadêmico:* Relatórios de desempenho.
+* *Gestão de Alunos:* 
+* *Gestão de cursos:* 
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+### 🖥 Backend:
+
+* ☕  java
+* 🚀 Spring Boot
+* 🧩 Maven
+
+### 🖥 Frontend:
+
+* ⚛ React
+* 📜 JavaScript
+* ⚡  Vite
+
+### Banco de Dados:
+
+* 🗄 🛢 H2 Database
