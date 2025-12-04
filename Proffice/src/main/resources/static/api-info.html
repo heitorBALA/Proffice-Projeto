@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proffice API - Documentação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .endpoints {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .endpoint-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .endpoint-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .endpoint-card h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .endpoint-card .path {
+            font-family: 'Courier New', monospace;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+
+        .method-list {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .method-list li {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .method {
+            font-weight: bold;
+            color: #764ba2;
+            font-family: 'Courier New', monospace;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+
+        .info-box strong {
+            color: #2196F3;
+        }
+
+        .db-info {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+
+        .db-info strong {
+            color: #856404;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            transition: background 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .link-button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .status {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Proffice API</h1>
+            <p>Sistema para Coordenadores de Cursos</p>
+            <p><span class="status">● Online</span></p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>📋 Endpoints Disponíveis</h2>
+
+                <div class="endpoints">
+                    <div class="endpoint-card">
+                        <h3>👨‍🎓 Alunos</h3>
+                        <div class="path">/alunos</div>
+                        <ul class="method-list">
+                            <li><span class="method">GET</span> /alunos - Listar todos os alunos</li>
+                            <li><span class="method">GET</span> /alunos/{id} - Buscar aluno por ID</li>
+                            <li><span class="method">POST</span> /alunos - Criar novo aluno</li>
+                            <li><span class="method">PUT</span> /alunos/{id} - Atualizar aluno</li>
+                            <li><span class="method">DELETE</span> /alunos/{id} - Deletar aluno</li>
+                        </ul>
+                    </div>
+
+                    <div class="endpoint-card">
+                        <h3>📚 Cursos</h3>
+                        <div class="path">/cursos</div>
+                        <ul class="method-list">
+                            <li><span class="method">GET</span> /cursos - Listar todos os cursos</li>
+                            <li><span class="method">GET</span> /cursos/{id} - Buscar curso por ID</li>
+                            <li><span class="method">POST</span> /cursos - Criar novo curso</li>
+                            <li><span class="method">PUT</span> /cursos/{id} - Atualizar curso</li>
+                            <li><span class="method">DELETE</span> /cursos/{id} - Deletar curso</li>
+                        </ul>
+                    </div>
+
+                    <div class="endpoint-card">
+                        <h3>🏫 Turmas</h3>
+                        <div class="path">/turmas</div>
+                        <ul class="method-list">
+                            <li><span class="method">GET</span> /turmas - Listar todas as turmas</li>
+                            <li><span class="method">GET</span> /turmas/{id} - Buscar turma por ID</li>
+                            <li><span class="method">POST</span> /turmas - Criar nova turma</li>
+                            <li><span class="method">PUT</span> /turmas/{id} - Atualizar turma</li>
+                            <li><span class="method">DELETE</span> /turmas/{id} - Deletar turma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🗄️ Banco de Dados</h2>
+                <div class="db-info">
+                    <p><strong>Tipo:</strong> H2 Database (In-Memory)</p>
+                    <p><strong>URL JDBC:</strong> jdbc:h2:mem:testdb</p>
+                    <p><strong>Usuário:</strong> heitor</p>
+                    <p><strong>Senha:</strong> (vazio)</p>
+                </div>
+                <a href="/h2-console" class="link-button" target="_blank">🔧 Acessar H2 Console</a>
+            </div>
+
+            <div class="section">
+                <h2>🚀 Links Rápidos</h2>
+                <a href="/alunos" class="link-button">Ver Alunos</a>
+                <a href="/cursos" class="link-button">Ver Cursos</a>
+                <a href="/turmas" class="link-button">Ver Turmas</a>
+            </div>
+
+            <div class="section">
+                <div class="info-box">
+                    <p><strong>ℹ️ Informação:</strong> Esta é uma API RESTful. Use ferramentas como Postman, Insomnia ou Thunder Client para testar os endpoints POST, PUT e DELETE.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
